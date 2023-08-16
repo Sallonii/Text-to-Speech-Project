@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d1c2ea8b80.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <title>Responsive TTS</title>
+    <link href="speech.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light nav-style fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#feed34" class="bi bi-card-text" viewBox="0 0 16 16">
+                    <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                    <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#00ffff" class="bi bi-soundwave" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8.5 2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5zm-2 2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm-6 1.5A.5.5 0 0 1 5 6v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm8 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm-10 1A.5.5 0 0 1 3 7v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5zm12 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5z" />
+                </svg>
+            </a>
+            <button class="navbar-toggler" style="background-color: white;" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link active" id="navItem1" href="#wcuSection">
+                        Why Choose Us?
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    <a class="nav-link" href="#ttsMeanSection" id="navItem2">What is TTS?</a>
+                    <a class="nav-link" href="#followsUsSection" id="navItem3">Follow Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <h1 class="heading-style">Text-t<i class="fa-solid fa-o fa-bounce fa-2xs" style="color: #f0f415;"></i>-Speech</h1>
+                    <p class="text-white text-center">Convert your text to a speech in different accents.</p>
+                </div>
+                <div class="col-12">
+                    <h1 class="text-center second-heading-style">Select any text for speech.</h1>
+                </div>
+                <div class="col-6">
+                    <div class="ml-3">
+                        <label for="status" class="option-heading-style">Voice Type</label>
+                        <br />
+                        <select id="status" class="form-control option-style">
+                            <option value="Albanian Male">Albanian Male</option>
+                            <option value="Arabic Female">Arabic Female</option>
+                            <option value="Arabic Male">Arabic Male</option>
+                            <option value="Armenian Male">Armenian Male</option>
+                            <option value="Australian Female">Australian Female</option>
+                            <option value="Australian Male">Australian Male</option>
+                            <option value="Bosnian Female">Bosnian Female</option>
+                            <option value="Bosnian Male">Bosnian Male</option>
+                            <option value="Brazilian Portuguese Female">Brazilian Portuguese Female</option>
+                            <option value="Brazilian Portugese Male">Brazilian Portugese Male</option>
+                            <option value="Catalan Male">Catalan Male</option>
+                            <option value="Chinese (Hong Kong) Female">Chinese (Hong Kong) Female</option>
+                            <option value="Chinese (Hong Kong) Male">Chinese (Hong Kong) Male</option>
+                            <option value="Chinese Female">Chinese Female</option>
+                            <option value="Chinese Male">Chinese Male</option>
+                            <option value="Chinese Taiwan Female">Chinese Taiwan Female</option>
+                            <option value="Chinese Taiwan Male">Chinese Taiwan Male</option>
+                            <option value="Croatian Female">Croatian Female</option>
+                            <option value="Croatian Male">Croatian Male</option>
+                            <option value="Czeck Male">Czeck Male</option>
+                            <option value="Czech Female">Czech Female</option>
+                            <option value="Danish Female">Danish Female</option>
+                            <option value="Danish Male">Danish Male</option>
+                            <option value="Dutch Female">Dutch Female</option>
+                            <option value="Dutch Male">Dutch Male</option>
+                            <option value="Esperanto Male">Esperanto Male</option>
+                            <option value="Finnish Female">Finnish Female</option>
+                            <option value="Finnish Male">Finnish Male</option>
+                            <option value="French Female">French Female</option>
+                            <option value="French Male">French Male</option>
+                            <option value="German Female">German Female</option>
+                            <option value="German Male">German Male</option>
+                            <option value="Greek Female">Greek Female</option>
+                            <option value="Greek Male">Greek Male</option>
+                            <option value="Hindi Female">Hindi Female</option>
+                            <option value="Hindi Male" selected>Hindi Male</option>
+                            <option value="Hungarian Female">Hungarian Female</option>
+                            <option value="Hungarian Male">Hungarian Male</option>
+                            <option value="Icelandic Male">Icelandic Male</option>
+                            <option value="Indonesian Female">Indonesian Female</option>
+                            <option value="Indonesian Male">Indonesian Male</option>
+                            <option value="Italian Female">Italian Female</option>
+                            <option value="Italian male">Italian male</option>
+                            <option value="Japanese Female">Japanese Female</option>
+                            <option value="Japanese Male">Japanese Male</option>
+                            <option value="Korean Female">Korean Female</option>
+                            <option value="Korean Male">Korean Male</option>
+                            <option value="Latin Female">Latin Female</option>
+                            <option value="Latin Male">Latin Male</option>
+                            <option value="Latvian Male">Latvian Male</option>
+                            <option value="Macedonian Male">Macedonian Male</option>
+                            <option value="Moldavian Male">Moldavian Male</option>
+                            <option value="Montenegrin Male">Montenegrin Male</option>
+                            <option value="Norwegian female">Norwegian female</option>
+                            <option value="Norwegian male">Norwegian male</option>
+                            <option value="Polish Female">Polish Female</option>
+                            <option value="Polish Male">Polish Male</option>
+                            <option value="Portuguese Female">Portuguese Female</option>
+                            <option value="Portugese Male">Portugese Male</option>
+                            <option value="Romanian Female">Romanian Female</option>
+                            <option value="Romanian Male">Romanian Male</option>
+                            <option value="Russian Female">Russian Female</option>
+                            <option value="Russian Male">Russian Male</option>
+                            <option value="Serbian Female">Serbian Female</option>
+                            <option value="Serbian Male">Serbian Male</option>
+                            <option value="Serbo-Croatian Male">Serbo-Croatian Male</option>
+                            <option value="Slovak Female">Slovak Female</option>
+                            <option value="Slovak Male">Slovak Male</option>
+                            <option value="Spanish Female">Spanish Female</option>
+                            <option value="Spanish Latin American Female">Spanish Latin American Female</option>
+                            <option value="Spanish Latin American Male">Spanish Latin American Male</option>
+                            <option value="Spanish Male">Spanish Male</option>
+                            <option value="Swahili Male">Swahili Male</option>
+                            <option value="Swedish Female">Swedish Female</option>
+                            <option value="Swedish Male">Swedish Male</option>
+                            <option value="Tamil Male">Tamil Male</option>
+                            <option value="Thai Female">Thai Female</option>
+                            <option value="Turkish Female">Turkish Female</option>
+                            <option value="Turkish Male">Turkish Male</option>
+                            <option value="UK English Female">UK English Female</option>
+                            <option value="UK English Male">UK English Male</option>
+                            <option value="US English Female">US English Female</option>
+                            <option value="US English Male">US English Male</option>
+                            <option value="Vietnamese Female">Vietnamese Female</option>
+                            <option value="Vietnamese Male">Vietnamese Male</option>
+                            <option value="Welsh Male">Welsh Male</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="ml-3">
+                        <label for="pitchOfVoice" class="option-heading-style">Select Pitch</label>
+                        <select id="pitchOfVoice" class="form-control option-style">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6 mt-3">
+                    <div class="ml-3">
+                        <div class="ml-3">
+                            <label for="VolumeOfVoice" class="option-heading-style">Volume</label>
+                            <select id="VolumeOfVoice" class="form-control option-style">
+                                <option value="0">0</option>
+                                <option value="0.5">0.5</option>
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 mt-3">
+                    <div class="ml-3">
+                        <label for="rateOfVoice" class="option-heading-style">Rate</label>
+                        <select id="rateOfVoice" class="form-control option-style">
+                            <option value="0">0</option>
+                            <option value="0.3">0.3</option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 mt-5 mb-5 text-center">
+                    <textarea id="text" cols="40" rows="5" placeholder="Enter text here..." class="textarea-style"></textarea>
+                </div>
+                <div class="col-12 text-center mb-4">
+                    <button id="generateButton" class="generate-speech-btn">Generate Speech</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wcu-section pt-5 pb-5" id="wcuSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="wcu-section-heading p-3">Why Choose Us?</h1>
+                    <p class="wcu-section-description">
+                        We use both original recipes and classic versions of famous food
+                        items.
+                    </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="wcu-card p-3 mb-3">
+                        <i class="fa-solid fa-language fa-beat-fade icon-style" style="color: #d6d024;"></i>
+                        <h1 class="wcu-card-title mt-3">51 Languages</h1>
+                        <p class="wcu-card-description">
+                            Responsive voice TTS can generate voices for different languages, accents, genders, and emotions. It can also customize the pitch, speed, and volume of the speech according to the user's preferences.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="wcu-card p-3 mb-3">
+                        <i class="fa-solid fa-user fa-beat-fade icon-style" style="color: #ced204;"></i>
+                        <h1 class="wcu-card-title mt-3">Lifelike Human Digital Voices</h1>
+                        <p class="wcu-card-description">
+                            Lifelike human digital voices are becoming more accessible and realistic thanks to responsive voice TTS. This technology uses advanced algorithms and natural language processing to create speech that sounds natural and expressive.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="wcu-card p-3 mb-3">
+                        <i class="fa-brands fa-app-store fa-beat-fade icon-style" style="color: #e1e515;"></i>
+                        <h1 class="wcu-card-title mt-3">Application</h1>
+                        <p class="wcu-card-description">
+                            Responsive voice TTS is useful for various applications, such as e-learning, audiobooks, podcasts, voice assistants, and accessibility.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tts-description text-white p-5" id="ttsMeanSection">
+        <h1 class="mb-5">What does TTS mean?</h1>
+        <p class="mb-5">TTS stands for Text-to-Speech (TTS), also referred to as speech synthesis, a transformative technology that uses artificial intelligence (AI) to convert written text into incredibly lifelike spoken words. TTS systems play a vital role in improving accessibility, particularly for individuals with learning disabilities and visual impairments, as they can have any text read aloud.</p>
+        <p class="mt-5">Text-to-speech (TTS) is a technology that converts text into spoken audio. It can read aloud PDFs, websites, and books using natural AI voices1.</p>
+    </div>
+    <div class="ecommerce-footer-bg" id="followsUsSection">
+        <hr class="ecommerce-footer-hr-line" />
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div class="text-center text-md-left m-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#feed34" class="bi bi-card-text" viewBox="0 0 16 16">
+                            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                            <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#00ffff" class="bi bi-soundwave" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8.5 2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5zm-2 2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zm-6 1.5A.5.5 0 0 1 5 6v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm8 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm-10 1A.5.5 0 0 1 3 7v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5zm12 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0V7a.5.5 0 0 1 .5-.5z" />
+                        </svg>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center justify-content-md-start">
+                        <div class="ecommerce-media"><i class="ecommerce-icon fab fa-google"></i></div>
+                        <div class="ecommerce-media"><i class="ecommerce-icon fab fa-twitter"></i></div>
+                        <div class="ecommerce-media"><i class="ecommerce-icon fab fa-instagram"></i></div>
+                        <div class="ecommerce-media"><i class="ecommerce-icon fab fa-linkedin"></i></div>
+                    </div>
+                    <p class="ecommerce-small-para text-center text-md-left">37, Ayur Vigyan Ngar, New Delhi, India.</p>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <p class="ecommerce-small-para">Get to know us</p>
+                    <p class="ecommerce-footer-small-para">About us</p>
+                    <p class="ecommerce-footer-small-para">Career</p>
+                    <p class="ecommerce-footer-small-para">Press Releases</p>
+                    <p class="ecommerce-footer-small-para">Gift a smile</p>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <p class="ecommerce-small-para">Contact with Us</p>
+                    <p class="ecommerce-footer-small-para">Facebook</p>
+                    <p class="ecommerce-footer-small-para">Twitter</p>
+                    <p class="ecommerce-footer-small-para">Instagram</p>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <p class="ecommerce-small-para">Let Us Help You</p>
+                    <p class="ecommerce-footer-small-para">Your Account</p>
+                    <p class="ecommerce-footer-small-para">Help</p>
+                </div>
+            </div>
+        </div>
+        <hr class="ecommerce-footer-hr-line" />
+        <p class="ecommerce-small-para text-center">Copyright <i class="fas fa-copyright copy-right mr-2" aria-hidden="true"></i>2023 by Saloni. FlexibleVoice</p>
+    </div>
+    <script src="speech.js"></script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=fAFjL4ah"></script>
+</body>
+
+</html>
